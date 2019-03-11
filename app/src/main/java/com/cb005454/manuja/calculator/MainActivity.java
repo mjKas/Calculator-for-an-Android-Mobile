@@ -7,7 +7,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
- double a=0, no1; int no2; String Oppp;
+ double a=0, no1; int no2; String Oppp, display;
  TextView textView, textview2;
  boolean ispointvalueClicked = true;
  String numm="", op="";
@@ -144,9 +144,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public String opptr(String o){
-
-
-                textView.setText(b+o);
+            Double bb = b;
+         display = bb.toString()+o;
+         textView.setText(display);
 
 
         return o;
@@ -210,14 +210,14 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-
-
-
-
         Double bb = b;
         String tot=  bb.toString();
         textView.setText(tot);
         return  tot;
+    }
+
+    public void checkOperator(){
+
     }
 
 }
